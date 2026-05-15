@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>LifeFlow — задачи и привычки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <div class="header">
+        <h1>LifeFlow</h1>
+    </div>
+    
+    <div class="nav">
+        <button class="tab-btn active" data-tab="todo">Мой день</button>
+        <button class="tab-btn" data-tab="habits">Привычки</button>
+        <button class="tab-btn" data-tab="stats">Статистика</button>
+    </div>
+
+    <div id="todoScreen" class="screen active">
+        <h3 style="margin-bottom: 8px;">Задачи на сегодня</h3>
+        <div id="taskList" class="task-list"></div>
+        <div class="add-form">
+            <input type="text" id="taskInput" placeholder="Купить продукты, сделать зарядку ...">
+            <button id="addTaskBtn" class="primary-btn">➕ Добавить</button>
+        </div>
+    </div>
+
+    <div id="habitsScreen" class="screen">
+        <h3>Ежедневные привычки</h3>
+        <div class="progress-container">
+            <div id="habitProgressFill" class="progress-bar"></div>
+        </div>
+        <div id="habitList" class="habit-list"></div>
+        <div class="add-form">
+            <input type="text" id="habitInput" placeholder="Новая привычка ...">
+            <button id="addHabitBtn" class="primary-btn">➕ Добавить</button>
+        </div>
+    </div>
+
+    <div id="statsScreen" class="screen">
+        <div class="stats-card">
+            <div>Задач выполнено</div>
+            <div id="totalTasksDone" class="stats-number">0</div>
+        </div>
+        <div class="stats-card">
+            <div>Привычек выполнено сегодня</div>
+            <div id="habitsDoneToday" class="stats-number">0</div>
+        </div>
+        <button id="resetAllData" class="reset-btn">🗑 Сбросить все данные</button>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
